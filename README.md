@@ -1,13 +1,13 @@
 # ring-middleware-session-alt-memcached
 
-A Clojure library designed to ... well, that part is up to you.
+ring-middleware-session-memcached(https://github.com/killme2008/ring-session-memcache) rewrite using spyglass
 
 ## Usage
 
-FIXME
+alpha
 
 ## License
 
-Copyright © 2014 FIXME
+Copyright © 2014 yukinekonyan
 
 Distributed under the Eclipse Public License, the same as Clojure.

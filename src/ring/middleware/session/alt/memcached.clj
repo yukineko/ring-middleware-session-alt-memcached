@@ -1,7 +1,8 @@
 (ns ring.middleware.session.alt.memcached
   (:use ring.middleware.session.store)
   (:require 
-   [clojurewerkz.spyglass.client :as client]))
+   [clojurewerkz.spyglass.client :as client])
+  (:import [java.util UUID]))
 
 (deftype MemcachedStore [client]
   SessionStore
@@ -11,7 +12,7 @@
       (catch Exception e {})))
   (write-session [_ key data]
     (let [key (or key (str (UUID/randomUUID)))]
-      (client/set client key data)
+      (client/set client key (* 3600 24 7) data)
       key))
   (delete-session [_ key]
     (if-not (client/delete client key) key)))
