@@ -8,6 +8,6 @@ alpha
 
 ## License
 
-Copyright © 2014 yukinekonyan
+Copyright © 2014 yukineko
 
 Distributed under the Eclipse Public License, the same as Clojure.
